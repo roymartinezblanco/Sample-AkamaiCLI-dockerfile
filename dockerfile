@@ -33,8 +33,7 @@ RUN echo "[cli]" > /cli/.akamai-cli/config && \
     echo "install-in-path       =" >> /cli/.akamai-cli/config && \
     echo "last-upgrade-check    = ignore" >> /cli/.akamai-cli/config && \
     echo "stats-version         = 1.1" >> /cli/.akamai-cli/config
-#ADD setup.py /jenkins
-#RUN chmod +x /jenkins/setup.py 
+
 RUN chown jenkins -R /jenkins/
 RUN chown jenkins -R  /cli/
 USER jenkins
